@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SMH</title>
+<link rel="icon" type="image/jpg" href="/static/logo.jpg">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="inputs">
+    <form action="{{ url_for('predict') }}" method="post">
+        <h1>Brain Stroke Prediction</h1>
+        <div class="input-box">
+            <input list="Gender" placeholder="Gender" name="Gender" required>
+            <datalist id="Gender">
+                <option value="Male">
+                <option value="Female">
+            </datalist>
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="Age" min="1" max="150" name="Age" required>
+        </div>
+        <div class="input-box">
+            <input list="hypertension" placeholder="Hypertension" name="hypertension" required>
+            <datalist id="hypertension">
+                <option value="Yes">
+                <option value="No">
+            </datalist>
+        </div>
+        <div class="input-box">
+            <input list="heart_disease" placeholder="Heart Disease" min="0" max="1" name="heart_disease" required>
+            <datalist id="heart_disease">
+                <option value="Yes">
+                <option value="No">
+            </datalist>
+        </div>
+        <div class="input-box">
+            <input list="Marital" placeholder="Marital Status" name="ever_married" required>
+            <datalist id="Marital">
+                <option value="Yes">
+                <option value="No">
+            </datalist>
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="Average Glucose Level" name="avg_glucose_level" required>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Body Mass Index (BMI)" name="bmi" required>
+        </div>
+        <div class="input-box">
+            <input list="Smoking" placeholder="Smoking Status" name="smoking_status" required>
+            <datalist id="Smoking">
+                <option value="Never">
+                <option value="Former">
+                <option value="Current">
+                <option value="Unknown">
+            </datalist>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>      
+</div>
+</body>
+</html>
